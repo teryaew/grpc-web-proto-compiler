@@ -23,7 +23,7 @@ VOLUME /proto
 CMD rm -rf $OUTPUT && \
     mkdir $OUTPUT && \
     /usr/local/bin/protoc \
-    /proto/**/*.proto \
+    /proto/*.proto \
     --proto_path=/proto \
     --js_out=import_style=$JS_OUT_IMPORT_STYLE:$OUTPUT \
     --grpc-web_out=import_style=$GRPC_WEB_OUT_IMPORT_STYLE,mode=$GRPC_OUT_MODE:$OUTPUT
